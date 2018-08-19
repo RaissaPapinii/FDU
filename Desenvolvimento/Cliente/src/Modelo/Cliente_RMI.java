@@ -7,11 +7,24 @@ package Modelo;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 /**
  *
  * @author raissa
  */
 public interface Cliente_RMI extends Remote{
-    void recebeNumero(String numero) throws RemoteException;
+    public int informaQntFaz();
+    
+    public void recebeMao(ArrayList<Carta> listaCartas);
+    
+    public void recebeListaQntVidas(ArrayList<Integer> listaQntVidas);
+    
+    public void recebeListaQntFaz(ArrayList<Integer> listaQntFaz);
+    
+    public void recebeJogadasRealizadas(ArrayList<Carta> listaJogadas);
+    
+    public Carta realizaJogada();
+    
+    public void perdeVida();
 }
