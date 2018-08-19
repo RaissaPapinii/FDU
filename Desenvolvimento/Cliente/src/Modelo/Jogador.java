@@ -39,7 +39,7 @@ public class Jogador {
         return nome;
     }
     
-    public int InformaQntFaz(){
+    public int informaQntFaz(){
         int qntFaz = 0;
         System.out.println("Quantos faz?");
         qntFaz = entrada.nextInt();
@@ -51,6 +51,24 @@ public class Jogador {
         this.listaCartas = listaCartas;
     }
     
+    public void recebeListaQntVidas(ArrayList<Integer> listaQntVidas){
+        for(int i=0; i<listaQntVidas.size();i++){
+            System.out.println(listaQntVidas.get(0));
+        }
+    }
+    
+    public void recebeListaQntFaz(ArrayList<Integer> listaQntFaz){
+        for(int i=0; i<listaQntFaz.size();i++){
+            System.out.println(listaQntFaz.get(0));
+        }
+    }
+    
+    public void recebeJogadasRealizadas(ArrayList<Carta> listaJogadas){
+        for(int i=0; i<listaJogadas.size();i++){
+            System.out.println(listaJogadas.get(0));
+        }
+    } 
+    
     public Carta realizaJogada(){
         int jogada = 0;
         System.out.println("Jogada: ");
@@ -61,7 +79,7 @@ public class Jogador {
     
     public void perdeVida(){
       qntVidas--;
-    }
-    
+    }    
     
 }
+
