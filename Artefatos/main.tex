@@ -1,0 +1,76 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{minted}
+\usepackage{indentfirst}
+\usepackage{graphicx}% <- pacote de imagens
+\usepackage{caption,subcaption}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+ 
+\urlstyle{same}
+
+\usepackage{listingsutf8}%pacote para inserir código fonte direto no texto
+
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0,0.5,0}
+
+\lstset{numbers=left,
+keywordstyle=\color{blue},
+stringstyle=\color{verde},
+commentstyle=\color{verde}, 
+stepnumber=1,
+firstnumber=1,
+numberstyle=\tiny,
+extendedchars=true,
+breaklines=true,
+frame=tb,
+basicstyle=\footnotesize,
+stringstyle=\ttfamily,
+showstringspaces=false
+}
+\title{Requisitos de Software}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Requisitos Funcionais}
+\textbf{RF01 -}  O sistema deverá permitir que um usuário crie uma partida informando nome, senha e quantidade de jogadores;
+
+\textbf{RF02 -} Deverá ser apresentada uma lista contendo todas as partidas onlines disponíveis;
+
+\textbf{RF03 -} O usuário poderá se conectar à uma partida informando seu nome e a senha da partida;
+
+\section{Requisitos Não-Funcionais}
+\textbf{RNF01 -} O sistema deve ser implementado na linguagem Java;
+
+\textbf{RNF02 -} Uma partida começa automaticamente quando o número de jogadores conectados for igual ao especificado na mesma;
+
+\textbf{RNF03 -} Todas as partidas deverão possuir nomes únicos;
+
+\textbf{RNF04 -} Os jogadores de uma partida deverão possuir nome único;
+
+\section{Regra de Negócios}
+\textbf{RN01 -} Os valores das cartas segue a ordem do truco;
+
+\textbf{RN02 -} A partida deverá conter entre 2 (dois) e 10 (dez) jogadores;
+
+\textbf{RN03 -} Cada jogador terá 3 (três) vidas por partida;
+\end{document}
